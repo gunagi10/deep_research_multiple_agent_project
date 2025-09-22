@@ -1,0 +1,7 @@
+pydantic
+ddgs
+bs4
+requests
+python-dotenv
+openai-agents
+streamlit
