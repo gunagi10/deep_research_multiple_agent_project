@@ -46,25 +46,35 @@ ResearchCoordinator → Query Agent → DuckDuckGo Search → Search Agent (summ
 - Synthesis Agent: Final markdown with citations    
 
 ## 📦 Project Layout
-app.py # Streamlit UI (Chat-first interface)
-coordinator.py # Orchestrates research loop; streams via callbacks
-models.py # Pydantic models
-research_agents/ # All agents are here
-deep_research_tool.py # function_tool wrapper for one-shot runs
+- app.py # Streamlit UI (Chat-first interface)
+- coordinator.py # Orchestrates research loop; streams via callbacks
+- models.py # Pydantic models
+- research_agents/ # All agents are here
+- deep_research_tool.py # function_tool wrapper for one-shot runs
 
 ## 🚀 Quick Start
-
-git clone <this-repo>
-cd <repo>
-python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-
-Create .env and insert your own OPENAI API KEY:
-OPENAI_API_KEY=sk-...
-
-Run:
-streamlit run app.py
+1. Clone the repo
+    ```bash
+    git clone <this-repo>
+    cd <repo>
+    ```
+2. Create and activate a virtual environment
+    ```bash
+    python -m venv .venv
+    source .venv/bin/activate   # Windows: .venv\Scripts\activate
+    ```
+3. Install dependencies
+    ```bash
+    pip install -r requirements.txt
+    ```
+4. Create a `.env` file and add:
+    ```
+    OPENAI_API_KEY=sk-...
+    ```
+5. Run the app
+    ```bash
+    streamlit run app.py
+    ```
 
 ## 🖥️ Usage
 - **Step 1:** Chat with validator, answer clarifying questions
